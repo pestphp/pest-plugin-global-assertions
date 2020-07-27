@@ -1,6 +1,6 @@
 {
-    "name": "pestphp/pest-plugin-template",
-    "description": "My awesome plugin",
+    "name": "pestphp/pest-plugin-global-assertions",
+    "description": "A plugin to add global assertions to Pest",
     "keywords": [
         "php",
         "framework",
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Pest\\PluginName\\": "src/"
+            "Pest\\GlobalAssertions\\": "src/"
         },
         "files": [
             "src/Autoload.php"
