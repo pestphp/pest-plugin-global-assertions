@@ -1,5 +1,5 @@
 <?php
 
-use function Pest\PluginName\example;
-
-example('foo');
+it('adds global assertions', function () {
+    assertTrue(true);
+});
