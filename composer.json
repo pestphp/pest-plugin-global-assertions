@@ -17,11 +17,8 @@
         "pestphp/pest-plugin": "^0.3"
     },
     "autoload": {
-        "psr-4": {
-            "Pest\\GlobalAssertions\\": "src/"
-        },
         "files": [
-            "src/Autoload.php"
+            "src/compiled.php"
         ]
     },
     "require-dev": {
@@ -39,6 +36,7 @@
         "preferred-install": "dist"
     },
     "scripts": {
+        "compile": "@php scripts/compile.php",
         "lint": "rector process src && php-cs-fixer fix -v",
         "test:lint": "php-cs-fixer fix -v --dry-run && rector process src --dry-run",
         "test:types": "phpstan analyse --ansi",
