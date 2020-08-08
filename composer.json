@@ -16,6 +16,9 @@
         "pestphp/pest": "^0.3",
         "pestphp/pest-plugin": "^0.3"
     },
+    "conflict": {
+        "pestphp/pest": "<0.3"
+    },
     "autoload": {
         "files": [
             "src/compiled.php"
