@@ -66,7 +66,7 @@ use PHPUnit\Framework\MockObject\Stub\ReturnStub;
 use PHPUnit\Framework\MockObject\Stub\ReturnValueMap as ReturnValueMapStub;
 use SebastianBergmann\RecursionContext\InvalidArgumentException;
 
-if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
+if (!\defined('__PEST_GLOBAL_ASSERT_WRAPPERS__')) {
     /**
      * Asserts that an array has a specified key.
      *
@@ -81,7 +81,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertArrayHasKey($key, $array, string $message = ''): void
     {
-        Assert::assertArrayHasKey(...func_get_args());
+        Assert::assertArrayHasKey(...\func_get_args());
     }
 
     /**
@@ -98,7 +98,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertArrayNotHasKey($key, $array, string $message = ''): void
     {
-        Assert::assertArrayNotHasKey(...func_get_args());
+        Assert::assertArrayNotHasKey(...\func_get_args());
     }
 
     /**
@@ -112,12 +112,12 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertContains($needle, iterable $haystack, string $message = ''): void
     {
-        Assert::assertContains(...func_get_args());
+        Assert::assertContains(...\func_get_args());
     }
 
     function assertContainsEquals($needle, iterable $haystack, string $message = ''): void
     {
-        Assert::assertContainsEquals(...func_get_args());
+        Assert::assertContainsEquals(...\func_get_args());
     }
 
     /**
@@ -131,12 +131,12 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotContains($needle, iterable $haystack, string $message = ''): void
     {
-        Assert::assertNotContains(...func_get_args());
+        Assert::assertNotContains(...\func_get_args());
     }
 
     function assertNotContainsEquals($needle, iterable $haystack, string $message = ''): void
     {
-        Assert::assertNotContainsEquals(...func_get_args());
+        Assert::assertNotContainsEquals(...\func_get_args());
     }
 
     /**
@@ -149,7 +149,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertContainsOnly(string $type, iterable $haystack, ?bool $isNativeType = null, string $message = ''): void
     {
-        Assert::assertContainsOnly(...func_get_args());
+        Assert::assertContainsOnly(...\func_get_args());
     }
 
     /**
@@ -162,7 +162,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertContainsOnlyInstancesOf(string $className, iterable $haystack, string $message = ''): void
     {
-        Assert::assertContainsOnlyInstancesOf(...func_get_args());
+        Assert::assertContainsOnlyInstancesOf(...\func_get_args());
     }
 
     /**
@@ -175,7 +175,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotContainsOnly(string $type, iterable $haystack, ?bool $isNativeType = null, string $message = ''): void
     {
-        Assert::assertNotContainsOnly(...func_get_args());
+        Assert::assertNotContainsOnly(...\func_get_args());
     }
 
     /**
@@ -191,7 +191,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertCount(int $expectedCount, $haystack, string $message = ''): void
     {
-        Assert::assertCount(...func_get_args());
+        Assert::assertCount(...\func_get_args());
     }
 
     /**
@@ -207,7 +207,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotCount(int $expectedCount, $haystack, string $message = ''): void
     {
-        Assert::assertNotCount(...func_get_args());
+        Assert::assertNotCount(...\func_get_args());
     }
 
     /**
@@ -220,7 +220,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertEquals($expected, $actual, string $message = ''): void
     {
-        Assert::assertEquals(...func_get_args());
+        Assert::assertEquals(...\func_get_args());
     }
 
     /**
@@ -233,7 +233,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertEqualsCanonicalizing($expected, $actual, string $message = ''): void
     {
-        Assert::assertEqualsCanonicalizing(...func_get_args());
+        Assert::assertEqualsCanonicalizing(...\func_get_args());
     }
 
     /**
@@ -246,7 +246,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertEqualsIgnoringCase($expected, $actual, string $message = ''): void
     {
-        Assert::assertEqualsIgnoringCase(...func_get_args());
+        Assert::assertEqualsIgnoringCase(...\func_get_args());
     }
 
     /**
@@ -259,7 +259,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertEqualsWithDelta($expected, $actual, float $delta, string $message = ''): void
     {
-        Assert::assertEqualsWithDelta(...func_get_args());
+        Assert::assertEqualsWithDelta(...\func_get_args());
     }
 
     /**
@@ -272,7 +272,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotEquals($expected, $actual, string $message = ''): void
     {
-        Assert::assertNotEquals(...func_get_args());
+        Assert::assertNotEquals(...\func_get_args());
     }
 
     /**
@@ -285,7 +285,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotEqualsCanonicalizing($expected, $actual, string $message = ''): void
     {
-        Assert::assertNotEqualsCanonicalizing(...func_get_args());
+        Assert::assertNotEqualsCanonicalizing(...\func_get_args());
     }
 
     /**
@@ -298,7 +298,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotEqualsIgnoringCase($expected, $actual, string $message = ''): void
     {
-        Assert::assertNotEqualsIgnoringCase(...func_get_args());
+        Assert::assertNotEqualsIgnoringCase(...\func_get_args());
     }
 
     /**
@@ -311,7 +311,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotEqualsWithDelta($expected, $actual, float $delta, string $message = ''): void
     {
-        Assert::assertNotEqualsWithDelta(...func_get_args());
+        Assert::assertNotEqualsWithDelta(...\func_get_args());
     }
 
     /**
@@ -326,7 +326,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertEmpty($actual, string $message = ''): void
     {
-        Assert::assertEmpty(...func_get_args());
+        Assert::assertEmpty(...\func_get_args());
     }
 
     /**
@@ -341,7 +341,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotEmpty($actual, string $message = ''): void
     {
-        Assert::assertNotEmpty(...func_get_args());
+        Assert::assertNotEmpty(...\func_get_args());
     }
 
     /**
@@ -354,7 +354,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertGreaterThan($expected, $actual, string $message = ''): void
     {
-        Assert::assertGreaterThan(...func_get_args());
+        Assert::assertGreaterThan(...\func_get_args());
     }
 
     /**
@@ -367,7 +367,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertGreaterThanOrEqual($expected, $actual, string $message = ''): void
     {
-        Assert::assertGreaterThanOrEqual(...func_get_args());
+        Assert::assertGreaterThanOrEqual(...\func_get_args());
     }
 
     /**
@@ -380,7 +380,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertLessThan($expected, $actual, string $message = ''): void
     {
-        Assert::assertLessThan(...func_get_args());
+        Assert::assertLessThan(...\func_get_args());
     }
 
     /**
@@ -393,7 +393,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertLessThanOrEqual($expected, $actual, string $message = ''): void
     {
-        Assert::assertLessThanOrEqual(...func_get_args());
+        Assert::assertLessThanOrEqual(...\func_get_args());
     }
 
     /**
@@ -407,7 +407,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileEquals(string $expected, string $actual, string $message = ''): void
     {
-        Assert::assertFileEquals(...func_get_args());
+        Assert::assertFileEquals(...\func_get_args());
     }
 
     /**
@@ -421,7 +421,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileEqualsCanonicalizing(string $expected, string $actual, string $message = ''): void
     {
-        Assert::assertFileEqualsCanonicalizing(...func_get_args());
+        Assert::assertFileEqualsCanonicalizing(...\func_get_args());
     }
 
     /**
@@ -435,7 +435,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileEqualsIgnoringCase(string $expected, string $actual, string $message = ''): void
     {
-        Assert::assertFileEqualsIgnoringCase(...func_get_args());
+        Assert::assertFileEqualsIgnoringCase(...\func_get_args());
     }
 
     /**
@@ -449,7 +449,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileNotEquals(string $expected, string $actual, string $message = ''): void
     {
-        Assert::assertFileNotEquals(...func_get_args());
+        Assert::assertFileNotEquals(...\func_get_args());
     }
 
     /**
@@ -463,7 +463,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileNotEqualsCanonicalizing(string $expected, string $actual, string $message = ''): void
     {
-        Assert::assertFileNotEqualsCanonicalizing(...func_get_args());
+        Assert::assertFileNotEqualsCanonicalizing(...\func_get_args());
     }
 
     /**
@@ -477,7 +477,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileNotEqualsIgnoringCase(string $expected, string $actual, string $message = ''): void
     {
-        Assert::assertFileNotEqualsIgnoringCase(...func_get_args());
+        Assert::assertFileNotEqualsIgnoringCase(...\func_get_args());
     }
 
     /**
@@ -491,7 +491,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringEqualsFile(string $expectedFile, string $actualString, string $message = ''): void
     {
-        Assert::assertStringEqualsFile(...func_get_args());
+        Assert::assertStringEqualsFile(...\func_get_args());
     }
 
     /**
@@ -505,7 +505,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringEqualsFileCanonicalizing(string $expectedFile, string $actualString, string $message = ''): void
     {
-        Assert::assertStringEqualsFileCanonicalizing(...func_get_args());
+        Assert::assertStringEqualsFileCanonicalizing(...\func_get_args());
     }
 
     /**
@@ -519,7 +519,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringEqualsFileIgnoringCase(string $expectedFile, string $actualString, string $message = ''): void
     {
-        Assert::assertStringEqualsFileIgnoringCase(...func_get_args());
+        Assert::assertStringEqualsFileIgnoringCase(...\func_get_args());
     }
 
     /**
@@ -533,7 +533,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringNotEqualsFile(string $expectedFile, string $actualString, string $message = ''): void
     {
-        Assert::assertStringNotEqualsFile(...func_get_args());
+        Assert::assertStringNotEqualsFile(...\func_get_args());
     }
 
     /**
@@ -547,7 +547,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringNotEqualsFileCanonicalizing(string $expectedFile, string $actualString, string $message = ''): void
     {
-        Assert::assertStringNotEqualsFileCanonicalizing(...func_get_args());
+        Assert::assertStringNotEqualsFileCanonicalizing(...\func_get_args());
     }
 
     /**
@@ -561,7 +561,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringNotEqualsFileIgnoringCase(string $expectedFile, string $actualString, string $message = ''): void
     {
-        Assert::assertStringNotEqualsFileIgnoringCase(...func_get_args());
+        Assert::assertStringNotEqualsFileIgnoringCase(...\func_get_args());
     }
 
     /**
@@ -574,7 +574,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsReadable(string $filename, string $message = ''): void
     {
-        Assert::assertIsReadable(...func_get_args());
+        Assert::assertIsReadable(...\func_get_args());
     }
 
     /**
@@ -587,7 +587,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotReadable(string $filename, string $message = ''): void
     {
-        Assert::assertIsNotReadable(...func_get_args());
+        Assert::assertIsNotReadable(...\func_get_args());
     }
 
     /**
@@ -603,7 +603,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotIsReadable(string $filename, string $message = ''): void
     {
-        Assert::assertNotIsReadable(...func_get_args());
+        Assert::assertNotIsReadable(...\func_get_args());
     }
 
     /**
@@ -616,7 +616,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsWritable(string $filename, string $message = ''): void
     {
-        Assert::assertIsWritable(...func_get_args());
+        Assert::assertIsWritable(...\func_get_args());
     }
 
     /**
@@ -629,7 +629,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotWritable(string $filename, string $message = ''): void
     {
-        Assert::assertIsNotWritable(...func_get_args());
+        Assert::assertIsNotWritable(...\func_get_args());
     }
 
     /**
@@ -645,7 +645,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotIsWritable(string $filename, string $message = ''): void
     {
-        Assert::assertNotIsWritable(...func_get_args());
+        Assert::assertNotIsWritable(...\func_get_args());
     }
 
     /**
@@ -658,7 +658,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertDirectoryExists(string $directory, string $message = ''): void
     {
-        Assert::assertDirectoryExists(...func_get_args());
+        Assert::assertDirectoryExists(...\func_get_args());
     }
 
     /**
@@ -671,7 +671,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertDirectoryDoesNotExist(string $directory, string $message = ''): void
     {
-        Assert::assertDirectoryDoesNotExist(...func_get_args());
+        Assert::assertDirectoryDoesNotExist(...\func_get_args());
     }
 
     /**
@@ -687,7 +687,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertDirectoryNotExists(string $directory, string $message = ''): void
     {
-        Assert::assertDirectoryNotExists(...func_get_args());
+        Assert::assertDirectoryNotExists(...\func_get_args());
     }
 
     /**
@@ -700,7 +700,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertDirectoryIsReadable(string $directory, string $message = ''): void
     {
-        Assert::assertDirectoryIsReadable(...func_get_args());
+        Assert::assertDirectoryIsReadable(...\func_get_args());
     }
 
     /**
@@ -713,7 +713,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertDirectoryIsNotReadable(string $directory, string $message = ''): void
     {
-        Assert::assertDirectoryIsNotReadable(...func_get_args());
+        Assert::assertDirectoryIsNotReadable(...\func_get_args());
     }
 
     /**
@@ -729,7 +729,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertDirectoryNotIsReadable(string $directory, string $message = ''): void
     {
-        Assert::assertDirectoryNotIsReadable(...func_get_args());
+        Assert::assertDirectoryNotIsReadable(...\func_get_args());
     }
 
     /**
@@ -742,7 +742,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertDirectoryIsWritable(string $directory, string $message = ''): void
     {
-        Assert::assertDirectoryIsWritable(...func_get_args());
+        Assert::assertDirectoryIsWritable(...\func_get_args());
     }
 
     /**
@@ -755,7 +755,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertDirectoryIsNotWritable(string $directory, string $message = ''): void
     {
-        Assert::assertDirectoryIsNotWritable(...func_get_args());
+        Assert::assertDirectoryIsNotWritable(...\func_get_args());
     }
 
     /**
@@ -771,7 +771,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertDirectoryNotIsWritable(string $directory, string $message = ''): void
     {
-        Assert::assertDirectoryNotIsWritable(...func_get_args());
+        Assert::assertDirectoryNotIsWritable(...\func_get_args());
     }
 
     /**
@@ -784,7 +784,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileExists(string $filename, string $message = ''): void
     {
-        Assert::assertFileExists(...func_get_args());
+        Assert::assertFileExists(...\func_get_args());
     }
 
     /**
@@ -797,7 +797,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileDoesNotExist(string $filename, string $message = ''): void
     {
-        Assert::assertFileDoesNotExist(...func_get_args());
+        Assert::assertFileDoesNotExist(...\func_get_args());
     }
 
     /**
@@ -813,7 +813,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileNotExists(string $filename, string $message = ''): void
     {
-        Assert::assertFileNotExists(...func_get_args());
+        Assert::assertFileNotExists(...\func_get_args());
     }
 
     /**
@@ -826,7 +826,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileIsReadable(string $file, string $message = ''): void
     {
-        Assert::assertFileIsReadable(...func_get_args());
+        Assert::assertFileIsReadable(...\func_get_args());
     }
 
     /**
@@ -839,7 +839,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileIsNotReadable(string $file, string $message = ''): void
     {
-        Assert::assertFileIsNotReadable(...func_get_args());
+        Assert::assertFileIsNotReadable(...\func_get_args());
     }
 
     /**
@@ -855,7 +855,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileNotIsReadable(string $file, string $message = ''): void
     {
-        Assert::assertFileNotIsReadable(...func_get_args());
+        Assert::assertFileNotIsReadable(...\func_get_args());
     }
 
     /**
@@ -868,7 +868,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileIsWritable(string $file, string $message = ''): void
     {
-        Assert::assertFileIsWritable(...func_get_args());
+        Assert::assertFileIsWritable(...\func_get_args());
     }
 
     /**
@@ -881,7 +881,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileIsNotWritable(string $file, string $message = ''): void
     {
-        Assert::assertFileIsNotWritable(...func_get_args());
+        Assert::assertFileIsNotWritable(...\func_get_args());
     }
 
     /**
@@ -897,7 +897,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFileNotIsWritable(string $file, string $message = ''): void
     {
-        Assert::assertFileNotIsWritable(...func_get_args());
+        Assert::assertFileNotIsWritable(...\func_get_args());
     }
 
     /**
@@ -912,7 +912,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertTrue($condition, string $message = ''): void
     {
-        Assert::assertTrue(...func_get_args());
+        Assert::assertTrue(...\func_get_args());
     }
 
     /**
@@ -927,7 +927,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotTrue($condition, string $message = ''): void
     {
-        Assert::assertNotTrue(...func_get_args());
+        Assert::assertNotTrue(...\func_get_args());
     }
 
     /**
@@ -942,7 +942,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFalse($condition, string $message = ''): void
     {
-        Assert::assertFalse(...func_get_args());
+        Assert::assertFalse(...\func_get_args());
     }
 
     /**
@@ -957,7 +957,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotFalse($condition, string $message = ''): void
     {
-        Assert::assertNotFalse(...func_get_args());
+        Assert::assertNotFalse(...\func_get_args());
     }
 
     /**
@@ -972,7 +972,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNull($actual, string $message = ''): void
     {
-        Assert::assertNull(...func_get_args());
+        Assert::assertNull(...\func_get_args());
     }
 
     /**
@@ -987,7 +987,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotNull($actual, string $message = ''): void
     {
-        Assert::assertNotNull(...func_get_args());
+        Assert::assertNotNull(...\func_get_args());
     }
 
     /**
@@ -1000,7 +1000,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertFinite($actual, string $message = ''): void
     {
-        Assert::assertFinite(...func_get_args());
+        Assert::assertFinite(...\func_get_args());
     }
 
     /**
@@ -1013,7 +1013,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertInfinite($actual, string $message = ''): void
     {
-        Assert::assertInfinite(...func_get_args());
+        Assert::assertInfinite(...\func_get_args());
     }
 
     /**
@@ -1026,7 +1026,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNan($actual, string $message = ''): void
     {
-        Assert::assertNan(...func_get_args());
+        Assert::assertNan(...\func_get_args());
     }
 
     /**
@@ -1040,7 +1040,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertClassHasAttribute(string $attributeName, string $className, string $message = ''): void
     {
-        Assert::assertClassHasAttribute(...func_get_args());
+        Assert::assertClassHasAttribute(...\func_get_args());
     }
 
     /**
@@ -1054,7 +1054,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertClassNotHasAttribute(string $attributeName, string $className, string $message = ''): void
     {
-        Assert::assertClassNotHasAttribute(...func_get_args());
+        Assert::assertClassNotHasAttribute(...\func_get_args());
     }
 
     /**
@@ -1068,7 +1068,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertClassHasStaticAttribute(string $attributeName, string $className, string $message = ''): void
     {
-        Assert::assertClassHasStaticAttribute(...func_get_args());
+        Assert::assertClassHasStaticAttribute(...\func_get_args());
     }
 
     /**
@@ -1082,7 +1082,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertClassNotHasStaticAttribute(string $attributeName, string $className, string $message = ''): void
     {
-        Assert::assertClassNotHasStaticAttribute(...func_get_args());
+        Assert::assertClassNotHasStaticAttribute(...\func_get_args());
     }
 
     /**
@@ -1098,7 +1098,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertObjectHasAttribute(string $attributeName, $object, string $message = ''): void
     {
-        Assert::assertObjectHasAttribute(...func_get_args());
+        Assert::assertObjectHasAttribute(...\func_get_args());
     }
 
     /**
@@ -1114,7 +1114,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertObjectNotHasAttribute(string $attributeName, $object, string $message = ''): void
     {
-        Assert::assertObjectNotHasAttribute(...func_get_args());
+        Assert::assertObjectNotHasAttribute(...\func_get_args());
     }
 
     /**
@@ -1133,7 +1133,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertSame($expected, $actual, string $message = ''): void
     {
-        Assert::assertSame(...func_get_args());
+        Assert::assertSame(...\func_get_args());
     }
 
     /**
@@ -1148,7 +1148,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotSame($expected, $actual, string $message = ''): void
     {
-        Assert::assertNotSame(...func_get_args());
+        Assert::assertNotSame(...\func_get_args());
     }
 
     /**
@@ -1166,7 +1166,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertInstanceOf(string $expected, $actual, string $message = ''): void
     {
-        Assert::assertInstanceOf(...func_get_args());
+        Assert::assertInstanceOf(...\func_get_args());
     }
 
     /**
@@ -1184,7 +1184,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotInstanceOf(string $expected, $actual, string $message = ''): void
     {
-        Assert::assertNotInstanceOf(...func_get_args());
+        Assert::assertNotInstanceOf(...\func_get_args());
     }
 
     /**
@@ -1199,7 +1199,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsArray($actual, string $message = ''): void
     {
-        Assert::assertIsArray(...func_get_args());
+        Assert::assertIsArray(...\func_get_args());
     }
 
     /**
@@ -1214,7 +1214,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsBool($actual, string $message = ''): void
     {
-        Assert::assertIsBool(...func_get_args());
+        Assert::assertIsBool(...\func_get_args());
     }
 
     /**
@@ -1229,7 +1229,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsFloat($actual, string $message = ''): void
     {
-        Assert::assertIsFloat(...func_get_args());
+        Assert::assertIsFloat(...\func_get_args());
     }
 
     /**
@@ -1244,7 +1244,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsInt($actual, string $message = ''): void
     {
-        Assert::assertIsInt(...func_get_args());
+        Assert::assertIsInt(...\func_get_args());
     }
 
     /**
@@ -1259,7 +1259,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNumeric($actual, string $message = ''): void
     {
-        Assert::assertIsNumeric(...func_get_args());
+        Assert::assertIsNumeric(...\func_get_args());
     }
 
     /**
@@ -1274,7 +1274,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsObject($actual, string $message = ''): void
     {
-        Assert::assertIsObject(...func_get_args());
+        Assert::assertIsObject(...\func_get_args());
     }
 
     /**
@@ -1289,7 +1289,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsResource($actual, string $message = ''): void
     {
-        Assert::assertIsResource(...func_get_args());
+        Assert::assertIsResource(...\func_get_args());
     }
 
     /**
@@ -1304,7 +1304,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsClosedResource($actual, string $message = ''): void
     {
-        Assert::assertIsClosedResource(...func_get_args());
+        Assert::assertIsClosedResource(...\func_get_args());
     }
 
     /**
@@ -1319,7 +1319,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsString($actual, string $message = ''): void
     {
-        Assert::assertIsString(...func_get_args());
+        Assert::assertIsString(...\func_get_args());
     }
 
     /**
@@ -1334,7 +1334,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsScalar($actual, string $message = ''): void
     {
-        Assert::assertIsScalar(...func_get_args());
+        Assert::assertIsScalar(...\func_get_args());
     }
 
     /**
@@ -1349,7 +1349,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsCallable($actual, string $message = ''): void
     {
-        Assert::assertIsCallable(...func_get_args());
+        Assert::assertIsCallable(...\func_get_args());
     }
 
     /**
@@ -1364,7 +1364,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsIterable($actual, string $message = ''): void
     {
-        Assert::assertIsIterable(...func_get_args());
+        Assert::assertIsIterable(...\func_get_args());
     }
 
     /**
@@ -1379,7 +1379,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotArray($actual, string $message = ''): void
     {
-        Assert::assertIsNotArray(...func_get_args());
+        Assert::assertIsNotArray(...\func_get_args());
     }
 
     /**
@@ -1394,7 +1394,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotBool($actual, string $message = ''): void
     {
-        Assert::assertIsNotBool(...func_get_args());
+        Assert::assertIsNotBool(...\func_get_args());
     }
 
     /**
@@ -1409,7 +1409,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotFloat($actual, string $message = ''): void
     {
-        Assert::assertIsNotFloat(...func_get_args());
+        Assert::assertIsNotFloat(...\func_get_args());
     }
 
     /**
@@ -1424,7 +1424,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotInt($actual, string $message = ''): void
     {
-        Assert::assertIsNotInt(...func_get_args());
+        Assert::assertIsNotInt(...\func_get_args());
     }
 
     /**
@@ -1439,7 +1439,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotNumeric($actual, string $message = ''): void
     {
-        Assert::assertIsNotNumeric(...func_get_args());
+        Assert::assertIsNotNumeric(...\func_get_args());
     }
 
     /**
@@ -1454,7 +1454,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotObject($actual, string $message = ''): void
     {
-        Assert::assertIsNotObject(...func_get_args());
+        Assert::assertIsNotObject(...\func_get_args());
     }
 
     /**
@@ -1469,7 +1469,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotResource($actual, string $message = ''): void
     {
-        Assert::assertIsNotResource(...func_get_args());
+        Assert::assertIsNotResource(...\func_get_args());
     }
 
     /**
@@ -1484,7 +1484,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotClosedResource($actual, string $message = ''): void
     {
-        Assert::assertIsNotClosedResource(...func_get_args());
+        Assert::assertIsNotClosedResource(...\func_get_args());
     }
 
     /**
@@ -1499,7 +1499,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotString($actual, string $message = ''): void
     {
-        Assert::assertIsNotString(...func_get_args());
+        Assert::assertIsNotString(...\func_get_args());
     }
 
     /**
@@ -1514,7 +1514,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotScalar($actual, string $message = ''): void
     {
-        Assert::assertIsNotScalar(...func_get_args());
+        Assert::assertIsNotScalar(...\func_get_args());
     }
 
     /**
@@ -1529,7 +1529,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotCallable($actual, string $message = ''): void
     {
-        Assert::assertIsNotCallable(...func_get_args());
+        Assert::assertIsNotCallable(...\func_get_args());
     }
 
     /**
@@ -1544,7 +1544,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertIsNotIterable($actual, string $message = ''): void
     {
-        Assert::assertIsNotIterable(...func_get_args());
+        Assert::assertIsNotIterable(...\func_get_args());
     }
 
     /**
@@ -1557,7 +1557,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertMatchesRegularExpression(string $pattern, string $string, string $message = ''): void
     {
-        Assert::assertMatchesRegularExpression(...func_get_args());
+        Assert::assertMatchesRegularExpression(...\func_get_args());
     }
 
     /**
@@ -1573,7 +1573,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertRegExp(string $pattern, string $string, string $message = ''): void
     {
-        Assert::assertRegExp(...func_get_args());
+        Assert::assertRegExp(...\func_get_args());
     }
 
     /**
@@ -1586,7 +1586,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertDoesNotMatchRegularExpression(string $pattern, string $string, string $message = ''): void
     {
-        Assert::assertDoesNotMatchRegularExpression(...func_get_args());
+        Assert::assertDoesNotMatchRegularExpression(...\func_get_args());
     }
 
     /**
@@ -1602,7 +1602,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotRegExp(string $pattern, string $string, string $message = ''): void
     {
-        Assert::assertNotRegExp(...func_get_args());
+        Assert::assertNotRegExp(...\func_get_args());
     }
 
     /**
@@ -1620,7 +1620,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertSameSize($expected, $actual, string $message = ''): void
     {
-        Assert::assertSameSize(...func_get_args());
+        Assert::assertSameSize(...\func_get_args());
     }
 
     /**
@@ -1638,7 +1638,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertNotSameSize($expected, $actual, string $message = ''): void
     {
-        Assert::assertNotSameSize(...func_get_args());
+        Assert::assertNotSameSize(...\func_get_args());
     }
 
     /**
@@ -1651,7 +1651,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringMatchesFormat(string $format, string $string, string $message = ''): void
     {
-        Assert::assertStringMatchesFormat(...func_get_args());
+        Assert::assertStringMatchesFormat(...\func_get_args());
     }
 
     /**
@@ -1664,7 +1664,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringNotMatchesFormat(string $format, string $string, string $message = ''): void
     {
-        Assert::assertStringNotMatchesFormat(...func_get_args());
+        Assert::assertStringNotMatchesFormat(...\func_get_args());
     }
 
     /**
@@ -1677,7 +1677,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringMatchesFormatFile(string $formatFile, string $string, string $message = ''): void
     {
-        Assert::assertStringMatchesFormatFile(...func_get_args());
+        Assert::assertStringMatchesFormatFile(...\func_get_args());
     }
 
     /**
@@ -1690,7 +1690,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringNotMatchesFormatFile(string $formatFile, string $string, string $message = ''): void
     {
-        Assert::assertStringNotMatchesFormatFile(...func_get_args());
+        Assert::assertStringNotMatchesFormatFile(...\func_get_args());
     }
 
     /**
@@ -1703,7 +1703,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringStartsWith(string $prefix, string $string, string $message = ''): void
     {
-        Assert::assertStringStartsWith(...func_get_args());
+        Assert::assertStringStartsWith(...\func_get_args());
     }
 
     /**
@@ -1719,7 +1719,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringStartsNotWith($prefix, $string, string $message = ''): void
     {
-        Assert::assertStringStartsNotWith(...func_get_args());
+        Assert::assertStringStartsNotWith(...\func_get_args());
     }
 
     /**
@@ -1730,7 +1730,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringContainsString(string $needle, string $haystack, string $message = ''): void
     {
-        Assert::assertStringContainsString(...func_get_args());
+        Assert::assertStringContainsString(...\func_get_args());
     }
 
     /**
@@ -1741,7 +1741,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringContainsStringIgnoringCase(string $needle, string $haystack, string $message = ''): void
     {
-        Assert::assertStringContainsStringIgnoringCase(...func_get_args());
+        Assert::assertStringContainsStringIgnoringCase(...\func_get_args());
     }
 
     /**
@@ -1752,7 +1752,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringNotContainsString(string $needle, string $haystack, string $message = ''): void
     {
-        Assert::assertStringNotContainsString(...func_get_args());
+        Assert::assertStringNotContainsString(...\func_get_args());
     }
 
     /**
@@ -1763,7 +1763,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringNotContainsStringIgnoringCase(string $needle, string $haystack, string $message = ''): void
     {
-        Assert::assertStringNotContainsStringIgnoringCase(...func_get_args());
+        Assert::assertStringNotContainsStringIgnoringCase(...\func_get_args());
     }
 
     /**
@@ -1776,7 +1776,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringEndsWith(string $suffix, string $string, string $message = ''): void
     {
-        Assert::assertStringEndsWith(...func_get_args());
+        Assert::assertStringEndsWith(...\func_get_args());
     }
 
     /**
@@ -1789,7 +1789,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertStringEndsNotWith(string $suffix, string $string, string $message = ''): void
     {
-        Assert::assertStringEndsNotWith(...func_get_args());
+        Assert::assertStringEndsNotWith(...\func_get_args());
     }
 
     /**
@@ -1803,7 +1803,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertXmlFileEqualsXmlFile(string $expectedFile, string $actualFile, string $message = ''): void
     {
-        Assert::assertXmlFileEqualsXmlFile(...func_get_args());
+        Assert::assertXmlFileEqualsXmlFile(...\func_get_args());
     }
 
     /**
@@ -1817,7 +1817,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertXmlFileNotEqualsXmlFile(string $expectedFile, string $actualFile, string $message = ''): void
     {
-        Assert::assertXmlFileNotEqualsXmlFile(...func_get_args());
+        Assert::assertXmlFileNotEqualsXmlFile(...\func_get_args());
     }
 
     /**
@@ -1833,7 +1833,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertXmlStringEqualsXmlFile(string $expectedFile, $actualXml, string $message = ''): void
     {
-        Assert::assertXmlStringEqualsXmlFile(...func_get_args());
+        Assert::assertXmlStringEqualsXmlFile(...\func_get_args());
     }
 
     /**
@@ -1849,7 +1849,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertXmlStringNotEqualsXmlFile(string $expectedFile, $actualXml, string $message = ''): void
     {
-        Assert::assertXmlStringNotEqualsXmlFile(...func_get_args());
+        Assert::assertXmlStringNotEqualsXmlFile(...\func_get_args());
     }
 
     /**
@@ -1866,7 +1866,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertXmlStringEqualsXmlString($expectedXml, $actualXml, string $message = ''): void
     {
-        Assert::assertXmlStringEqualsXmlString(...func_get_args());
+        Assert::assertXmlStringEqualsXmlString(...\func_get_args());
     }
 
     /**
@@ -1883,7 +1883,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertXmlStringNotEqualsXmlString($expectedXml, $actualXml, string $message = ''): void
     {
-        Assert::assertXmlStringNotEqualsXmlString(...func_get_args());
+        Assert::assertXmlStringNotEqualsXmlString(...\func_get_args());
     }
 
     /**
@@ -1900,7 +1900,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertEqualXMLStructure(DOMElement $expectedElement, DOMElement $actualElement, bool $checkAttributes = false, string $message = ''): void
     {
-        Assert::assertEqualXMLStructure(...func_get_args());
+        Assert::assertEqualXMLStructure(...\func_get_args());
     }
 
     /**
@@ -1913,7 +1913,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertThat($value, Constraint $constraint, string $message = ''): void
     {
-        Assert::assertThat(...func_get_args());
+        Assert::assertThat(...\func_get_args());
     }
 
     /**
@@ -1926,7 +1926,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertJson(string $actualJson, string $message = ''): void
     {
-        Assert::assertJson(...func_get_args());
+        Assert::assertJson(...\func_get_args());
     }
 
     /**
@@ -1939,7 +1939,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertJsonStringEqualsJsonString(string $expectedJson, string $actualJson, string $message = ''): void
     {
-        Assert::assertJsonStringEqualsJsonString(...func_get_args());
+        Assert::assertJsonStringEqualsJsonString(...\func_get_args());
     }
 
     /**
@@ -1955,7 +1955,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertJsonStringNotEqualsJsonString($expectedJson, $actualJson, string $message = ''): void
     {
-        Assert::assertJsonStringNotEqualsJsonString(...func_get_args());
+        Assert::assertJsonStringNotEqualsJsonString(...\func_get_args());
     }
 
     /**
@@ -1968,7 +1968,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertJsonStringEqualsJsonFile(string $expectedFile, string $actualJson, string $message = ''): void
     {
-        Assert::assertJsonStringEqualsJsonFile(...func_get_args());
+        Assert::assertJsonStringEqualsJsonFile(...\func_get_args());
     }
 
     /**
@@ -1981,7 +1981,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertJsonStringNotEqualsJsonFile(string $expectedFile, string $actualJson, string $message = ''): void
     {
-        Assert::assertJsonStringNotEqualsJsonFile(...func_get_args());
+        Assert::assertJsonStringNotEqualsJsonFile(...\func_get_args());
     }
 
     /**
@@ -1994,7 +1994,7 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertJsonFileEqualsJsonFile(string $expectedFile, string $actualFile, string $message = ''): void
     {
-        Assert::assertJsonFileEqualsJsonFile(...func_get_args());
+        Assert::assertJsonFileEqualsJsonFile(...\func_get_args());
     }
 
     /**
@@ -2007,222 +2007,222 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
      */
     function assertJsonFileNotEqualsJsonFile(string $expectedFile, string $actualFile, string $message = ''): void
     {
-        Assert::assertJsonFileNotEqualsJsonFile(...func_get_args());
+        Assert::assertJsonFileNotEqualsJsonFile(...\func_get_args());
     }
 
     function logicalAnd(): LogicalAnd
     {
-        return Assert::logicalAnd(...func_get_args());
+        return Assert::logicalAnd(...\func_get_args());
     }
 
     function logicalOr(): LogicalOr
     {
-        return Assert::logicalOr(...func_get_args());
+        return Assert::logicalOr(...\func_get_args());
     }
 
     function logicalNot(Constraint $constraint): LogicalNot
     {
-        return Assert::logicalNot(...func_get_args());
+        return Assert::logicalNot(...\func_get_args());
     }
 
     function logicalXor(): LogicalXor
     {
-        return Assert::logicalXor(...func_get_args());
+        return Assert::logicalXor(...\func_get_args());
     }
 
     function anything(): IsAnything
     {
-        return Assert::anything(...func_get_args());
+        return Assert::anything(...\func_get_args());
     }
 
     function isTrue(): IsTrue
     {
-        return Assert::isTrue(...func_get_args());
+        return Assert::isTrue(...\func_get_args());
     }
 
     function callback(callable $callback): Callback
     {
-        return Assert::callback(...func_get_args());
+        return Assert::callback(...\func_get_args());
     }
 
     function isFalse(): IsFalse
     {
-        return Assert::isFalse(...func_get_args());
+        return Assert::isFalse(...\func_get_args());
     }
 
     function isJson(): IsJson
     {
-        return Assert::isJson(...func_get_args());
+        return Assert::isJson(...\func_get_args());
     }
 
     function isNull(): IsNull
     {
-        return Assert::isNull(...func_get_args());
+        return Assert::isNull(...\func_get_args());
     }
 
     function isFinite(): IsFinite
     {
-        return Assert::isFinite(...func_get_args());
+        return Assert::isFinite(...\func_get_args());
     }
 
     function isInfinite(): IsInfinite
     {
-        return Assert::isInfinite(...func_get_args());
+        return Assert::isInfinite(...\func_get_args());
     }
 
     function isNan(): IsNan
     {
-        return Assert::isNan(...func_get_args());
+        return Assert::isNan(...\func_get_args());
     }
 
     function containsEqual($value): TraversableContainsEqual
     {
-        return Assert::containsEqual(...func_get_args());
+        return Assert::containsEqual(...\func_get_args());
     }
 
     function containsIdentical($value): TraversableContainsIdentical
     {
-        return Assert::containsIdentical(...func_get_args());
+        return Assert::containsIdentical(...\func_get_args());
     }
 
     function containsOnly(string $type): TraversableContainsOnly
     {
-        return Assert::containsOnly(...func_get_args());
+        return Assert::containsOnly(...\func_get_args());
     }
 
     function containsOnlyInstancesOf(string $className): TraversableContainsOnly
     {
-        return Assert::containsOnlyInstancesOf(...func_get_args());
+        return Assert::containsOnlyInstancesOf(...\func_get_args());
     }
 
     function arrayHasKey($key): ArrayHasKey
     {
-        return Assert::arrayHasKey(...func_get_args());
+        return Assert::arrayHasKey(...\func_get_args());
     }
 
     function equalTo($value): IsEqual
     {
-        return Assert::equalTo(...func_get_args());
+        return Assert::equalTo(...\func_get_args());
     }
 
     function equalToCanonicalizing($value): IsEqualCanonicalizing
     {
-        return Assert::equalToCanonicalizing(...func_get_args());
+        return Assert::equalToCanonicalizing(...\func_get_args());
     }
 
     function equalToIgnoringCase($value): IsEqualIgnoringCase
     {
-        return Assert::equalToIgnoringCase(...func_get_args());
+        return Assert::equalToIgnoringCase(...\func_get_args());
     }
 
     function equalToWithDelta($value, float $delta): IsEqualWithDelta
     {
-        return Assert::equalToWithDelta(...func_get_args());
+        return Assert::equalToWithDelta(...\func_get_args());
     }
 
     function isEmpty(): IsEmpty
     {
-        return Assert::isEmpty(...func_get_args());
+        return Assert::isEmpty(...\func_get_args());
     }
 
     function isWritable(): IsWritable
     {
-        return Assert::isWritable(...func_get_args());
+        return Assert::isWritable(...\func_get_args());
     }
 
     function isReadable(): IsReadable
     {
-        return Assert::isReadable(...func_get_args());
+        return Assert::isReadable(...\func_get_args());
     }
 
     function directoryExists(): DirectoryExists
     {
-        return Assert::directoryExists(...func_get_args());
+        return Assert::directoryExists(...\func_get_args());
     }
 
     function fileExists(): FileExists
     {
-        return Assert::fileExists(...func_get_args());
+        return Assert::fileExists(...\func_get_args());
     }
 
     function greaterThan($value): GreaterThan
     {
-        return Assert::greaterThan(...func_get_args());
+        return Assert::greaterThan(...\func_get_args());
     }
 
     function greaterThanOrEqual($value): LogicalOr
     {
-        return Assert::greaterThanOrEqual(...func_get_args());
+        return Assert::greaterThanOrEqual(...\func_get_args());
     }
 
     function classHasAttribute(string $attributeName): ClassHasAttribute
     {
-        return Assert::classHasAttribute(...func_get_args());
+        return Assert::classHasAttribute(...\func_get_args());
     }
 
     function classHasStaticAttribute(string $attributeName): ClassHasStaticAttribute
     {
-        return Assert::classHasStaticAttribute(...func_get_args());
+        return Assert::classHasStaticAttribute(...\func_get_args());
     }
 
     function objectHasAttribute($attributeName): ObjectHasAttribute
     {
-        return Assert::objectHasAttribute(...func_get_args());
+        return Assert::objectHasAttribute(...\func_get_args());
     }
 
     function identicalTo($value): IsIdentical
     {
-        return Assert::identicalTo(...func_get_args());
+        return Assert::identicalTo(...\func_get_args());
     }
 
     function isInstanceOf(string $className): IsInstanceOf
     {
-        return Assert::isInstanceOf(...func_get_args());
+        return Assert::isInstanceOf(...\func_get_args());
     }
 
     function isType(string $type): IsType
     {
-        return Assert::isType(...func_get_args());
+        return Assert::isType(...\func_get_args());
     }
 
     function lessThan($value): LessThan
     {
-        return Assert::lessThan(...func_get_args());
+        return Assert::lessThan(...\func_get_args());
     }
 
     function lessThanOrEqual($value): LogicalOr
     {
-        return Assert::lessThanOrEqual(...func_get_args());
+        return Assert::lessThanOrEqual(...\func_get_args());
     }
 
     function matchesRegularExpression(string $pattern): RegularExpression
     {
-        return Assert::matchesRegularExpression(...func_get_args());
+        return Assert::matchesRegularExpression(...\func_get_args());
     }
 
     function matches(string $string): StringMatchesFormatDescription
     {
-        return Assert::matches(...func_get_args());
+        return Assert::matches(...\func_get_args());
     }
 
     function stringStartsWith($prefix): StringStartsWith
     {
-        return Assert::stringStartsWith(...func_get_args());
+        return Assert::stringStartsWith(...\func_get_args());
     }
 
     function stringContains(string $string, bool $case = true): StringContains
     {
-        return Assert::stringContains(...func_get_args());
+        return Assert::stringContains(...\func_get_args());
     }
 
     function stringEndsWith(string $suffix): StringEndsWith
     {
-        return Assert::stringEndsWith(...func_get_args());
+        return Assert::stringEndsWith(...\func_get_args());
     }
 
     function countOf(int $count): Count
     {
-        return Assert::countOf(...func_get_args());
+        return Assert::countOf(...\func_get_args());
     }
 
     /**
@@ -2333,10 +2333,10 @@ if (!defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {
 
     function onConsecutiveCalls(): ConsecutiveCallsStub
     {
-        $args = func_get_args();
+        $args = \func_get_args();
 
         return new ConsecutiveCallsStub($args);
     }
 
-    define('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__', true);
+    \define('__PEST_GLOBAL_ASSERT_WRAPPERS__', true);
 }

@@ -27,4 +27,8 @@ $contents = $remove($contents, 'use DOMDocument;');
 $contents = $remove($contents, 'use DOMElement;');
 $contents = $remove($contents, 'use Throwable;');
 
+// Fix for order of autoloading files
+$contents = $replace($contents, "if (!\\defined('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__')) {", "if (!\\defined('__PEST_GLOBAL_ASSERT_WRAPPERS__')) {");
+$contents = $replace($contents, "\\define('__PHPUNIT_GLOBAL_ASSERT_WRAPPERS__', true);\n}", "\\define('__PEST_GLOBAL_ASSERT_WRAPPERS__', true);\n}");
+
 file_put_contents($compiledFilePath, $contents);
