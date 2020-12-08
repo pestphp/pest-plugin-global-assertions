@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 it('adds global assertions', function (): void {
+    expect(function_exists('assertTrue'))->toBeTrue();
     assertTrue(true);
 });
 
