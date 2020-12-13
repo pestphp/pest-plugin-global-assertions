@@ -20,10 +20,16 @@ jobs:
         coverage: none
 
     - name: Install Dependencies
-      run: composer update --no-interaction --no-progress
+      run: composer update --no-interaction --no-progress --ansi
 
+<<<<<<< HEAD
+=======
+    - name: Run Rector
+      run: vendor/bin/rector process src --dry-run --ansi
+
+>>>>>>> a0161d41bddeb4dc8c7102e63cd65a77a9f6f764
     - name: Run PHP-CS-Fixer
-      run: vendor/bin/php-cs-fixer fix -v --allow-risky=yes --dry-run
+      run: vendor/bin/php-cs-fixer fix -v --allow-risky=yes --dry-run --ansi
 
   phpstan:
     runs-on: ubuntu-latest
@@ -45,7 +51,7 @@ jobs:
         coverage: none
 
     - name: Install Dependencies
-      run: composer update --prefer-stable --no-interaction --no-progress
+      run: composer update --prefer-stable --no-interaction --no-progress --ansi
 
     - name: Run PHPStan
-      run: vendor/bin/phpstan analyse --no-progress
+      run: vendor/bin/phpstan analyse --no-progress --ansi
