@@ -8,7 +8,8 @@
         "unit",
         "test",
         "testing",
-        "plugin"
+        "global",
+        "assertions"
     ],
     "license": "MIT",
     "require": {
@@ -29,7 +30,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.4.x-dev"
+            "dev-master": "0.3.x-dev"
         }
     },
     "minimum-stability": "dev",
@@ -40,8 +41,8 @@
     },
     "scripts": {
         "compile": "@php scripts/compile.php",
-        "lint": "rector process src && php-cs-fixer fix -v",
-        "test:lint": "php-cs-fixer fix -v --dry-run && rector process src --dry-run",
+        "lint": "php-cs-fixer fix -v",
+        "test:lint": "php-cs-fixer fix -v --dry-run",
         "test:types": "phpstan analyse --ansi",
         "test:unit": "pest --colors=always",
         "test": [
