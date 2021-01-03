@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## v1.0.0 (2021-01-03)
+### Changed
+- Stable version
+
 ## v0.3.1 (2020-12-08)
 ### Changed
 - Apply fixes for preloading and later PHPUnit versions
