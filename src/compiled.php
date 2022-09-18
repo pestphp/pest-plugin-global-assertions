@@ -73,7 +73,6 @@ use PHPUnit\Framework\MockObject\Stub\ReturnSelf as ReturnSelfStub;
 use PHPUnit\Framework\MockObject\Stub\ReturnStub;
 use PHPUnit\Framework\MockObject\Stub\ReturnValueMap as ReturnValueMapStub;
 
-
 if (!function_exists('assertArrayHasKey')) {
     /**
      * Asserts that an array has a specified key.
@@ -1456,7 +1455,9 @@ if (!function_exists('assertSame')) {
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      *
      * @psalm-template ExpectedType
+     *
      * @psalm-param ExpectedType $expected
+     *
      * @psalm-assert =ExpectedType $actual
      *
      * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -1497,7 +1498,9 @@ if (!function_exists('assertInstanceOf')) {
      * @throws Exception
      *
      * @psalm-template ExpectedType of object
+     *
      * @psalm-param class-string<ExpectedType> $expected
+     *
      * @psalm-assert =ExpectedType $actual
      *
      * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -1519,7 +1522,9 @@ if (!function_exists('assertNotInstanceOf')) {
      * @throws Exception
      *
      * @psalm-template ExpectedType of object
+     *
      * @psalm-param class-string<ExpectedType> $expected
+     *
      * @psalm-assert !ExpectedType $actual
      *
      * @no-named-arguments Parameter names are not covered by the backward compatibility promise for PHPUnit
@@ -2901,7 +2906,7 @@ if (!function_exists('any')) {
      */
     function any(): AnyInvokedCountMatcher
     {
-        return new AnyInvokedCountMatcher;
+        return new AnyInvokedCountMatcher();
     }
 }
 
@@ -2934,7 +2939,7 @@ if (!function_exists('atLeastOnce')) {
      */
     function atLeastOnce(): InvokedAtLeastOnceMatcher
     {
-        return new InvokedAtLeastOnceMatcher;
+        return new InvokedAtLeastOnceMatcher();
     }
 }
 
@@ -3017,7 +3022,7 @@ if (!function_exists('returnSelf')) {
      */
     function returnSelf(): ReturnSelfStub
     {
-        return new ReturnSelfStub;
+        return new ReturnSelfStub();
     }
 }
 
